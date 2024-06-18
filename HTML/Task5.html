@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 60%;
+        column-width: auto;
+        align-items: center;
+      }
+
+      input {
+        width: 98.5%;
+      }
+
+      .checkbox-container{
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+      }      
+
+      .checkbox-container input[type="checkbox"]{
+        margin-right: 5px; 
+      }
+
+      .declaration{
+        display: flex;
+        align-items: start;
+      }
+      #chk{
+        width: 5%;
+      }
+      #ref{
+        text-align: end;
+      }
+
+      .center{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .head{
+        text-align: center;
+        color: blue;
+      }
+      .male{
+        display: flex;
+      }
+      .female{
+        display: flex;
+      }
+      #male{
+        width: 5%;
+      }
+      #female{
+        width: 5%;
+      }
+      #firstnm, #lastnm{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="head">Registration Form</h1>
+    <table class="center">
+      <tr>
+        <td style="text-align: center;">
+          <label for="firstnm" id="firstnm">First Name</label>
+        </td>
+        <td>
+          <input type="text" name="fn" id="fn" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="lastnm" id="lastnm">Last Name</label>
+        </td>
+        <td>
+          <input type="text" name="ln" id="ln" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="mail">Email</label>
+        </td>
+        <td>
+          <input type="text" name="mail" id="mail" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="password">Password</label>
+        </td>
+        <td>
+          <input type="password" name="pw" id="pw" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="repassword">Re-enter Password</label>
+        </td>
+        <td>
+          <input type="password" name="repw" id="repw" />
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2" style="text-align: center;">
+          <label for="gender" id="gdr">Gender</label>
+        </td>
+        <td>
+          <div class="male">
+            <input type="radio" name="gender" id="male" /><label for="male" id="ml">Male</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        
+        <td>  
+          <div class="female">
+            <input type="radio" name="gender" id="female" /><label for="female" id="fml">Female</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="age">Age</label>
+        </td>
+        <td>
+          <input type="number" name="age" id="age" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="phone">Phone No.</label>
+        </td>
+        <td>
+          <input type="text" name="phn" id="phn" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="address">Address</label>
+        </td>
+        <td>
+          <input type="text" name="add" id="add" style="height: 4rem" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="state">State</label>
+        </td>
+        <td>
+          <input type="text" name="stt" id="stt" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="ctry">Country</label>
+        </td>
+        <td>
+          <select id="ctry" name="country" required>        <!--The <select> element is used to create the dropdown button.-->
+            <option value="">Choose Your Country</option>               <!--The <option> elements are used to specify the options for the dropdown button. The value attribute specifies the value that will be submitted with the form, and the text content of the <option> element specifies the text that will be displayed in the dropdown button.-->
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="Other">Other</option>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <label for="lang" id="lang">Languages Known</label>
+        </td>
+        <td>
+          <div class="checkbox-container">
+            <input type="checkbox" name="Hindi" id="hin"><label for="hin">Hindi</label>
+            <input type="checkbox" name="English" id="eng"><label for="eng">English</label>
+            <input type="checkbox" name="Marathi" id="mth"><label for="mth">Marathi</label>
+            <input type="checkbox" name="Gujarati" id="gj"><label for="gj">Gujarati</label>
+            <input type="checkbox" name="Kannada" id="knd"><label for="knd">Kannada</label>
+            <input type="checkbox" name="Malayalam" id="mly"><label for="mly">Malayalam</label>
+            <input type="checkbox" name="Telugu" id="tel"><label for="tel">Telugu</label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="declaration">
+            <input type="checkbox" name="chk" id="chk"/>
+            <label for="declaration">Hereby, I declare that all the details given are true to the best of my knowledge</label>
+          </div>
+      </tr>
+      <tr>
+        <td colspan="2" id="ref">
+          Log in to the <a href="https://ethnus.com/">ethnus</a> website
+        </td>
+      </tr>
+    </table>
+    <br>
+    <button type="submit" id="reg" style="margin-left:auto; margin-right:auto;display:block">Register</button>
+  </body>
+</html>

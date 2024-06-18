@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <style>
+        table,tr,td{
+            width:33%;
+            /*border: 2px solid black;
+            border-collapse: collapse;*/
+        }
+        
+    </style>
+  </head>
+  <body>
+    <table>
+        <tr>
+            <td><label for="fullname">Full Name:</label></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="userame">Username:</label></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td><label for="repass">Re-Write Password:</label></td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td><label for="address">Address:</label></td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender:</label></td>
+            <td><select id="gender" name="gender" required>        <!--The <select> element is used to create the dropdown button.-->
+                <option value="">Select</option>               <!--The <option> elements are used to specify the options for the dropdown button. The value attribute specifies the value that will be submitted with the form, and the text content of the <option> element specifies the text that will be displayed in the dropdown button.-->
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option></td>
+        </tr>
+        
+    </table><br>
+    <div>
+        <button type="submit" id="save">Save</button>
+    </div>
+  </body>
+</html>

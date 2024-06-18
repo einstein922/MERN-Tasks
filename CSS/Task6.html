@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <style>
+      img {
+        padding-left: 200px;
+        padding-right: auto;
+      }
+      input {
+        width: 592px;
+        height: 30px;
+      }
+      label {
+        font-weight: bold;
+      }
+      .box1 {
+        width: 600px;
+        height: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      button {
+        width: 600px;
+        height: 30px;
+        background-color: rgb(11, 183, 11);
+        color: white;
+        border: 0px;
+        padding: 0px;
+        border-collapse: collapse;
+      }
+      .form {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div>
+        <img
+          src="user.png"
+          alt="An Error Occured"
+          width="200px"
+          height="200px"
+        />
+      </div>
+      <div class="form">
+        <div style="margin-left: auto; margin-right: auto">
+          <label for="username">Username</label><br />
+          <input type="text" required placeholder="Enter Username" />
+        </div>
+        <br />
+        <div>
+          <label for="pw">Password</label><br />
+          <input
+            type="password"
+            name="pw"
+            id="pw"
+            placeholder="Enter Password"
+          />
+        </div>
+        <br />
+        <div>
+          <button type="submit">Login</button>
+        </div>
+        <div style="display: flex">
+          <input
+            type="checkbox"
+            id="chk"
+            style="
+              height: 15px;
+              width: 15px;
+              margin-left: 0px;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            "
+          />
+          <label for="remember" style="margin-top: 13px">Remember me</label>
+        </div>
+
+        <div
+          class="box2"
+          style="
+            width: 600px;
+            height: 40px;
+            background-color: darkgrey;
+            display: flex;
+            justify-content: space-between;
+          "
+        >
+          <div>
+            <button
+              type="reset"
+              style="
+                background-color: red;
+                width: 60px;
+                border-radius: 5px;
+                margin-top: 5px;
+                margin-left: 1px;
+              "
+            >
+              Cancel
+            </button>
+          </div>
+          <div>
+            <p
+              id="link"
+              style="width: 130px; margin-top: 10px; text-decoration: underline"
+            >
+              Forgot Password?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
