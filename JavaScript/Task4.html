@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <script>
+      function showDate() {
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        var currentdate = new Date();
+        var date =
+          currentdate.getDate() +
+          "/" +
+          months[currentdate.getMonth("long")] +
+          "/" +
+          currentdate.getFullYear();
+
+        let dateElement = document.getElementById("date");
+        dateElement.innerHTML = date;
+      }
+
+      function getCurrentDateTimeWithTimezone() {
+        let now = new Date();
+
+        let dateString = now.toString();
+
+        document.getElementById("gmt").innerHTML = dateString;
+      }
+    </script>
+    <button type="submit" onclick="showDate()">Show Date</button>
+    <div id="date"></div>
+    <br />
+    <button type="submit" onclick="getCurrentDateTimeWithTimezone()">
+      Show Time
+    </button>
+    <div id="gmt"></div>
+  </body>
+</html>

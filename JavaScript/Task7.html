@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 7</title>
+  </head>
+  <body>
+    <h1 style="color: navy">Click the following buttons to handle animation</h1>
+    <input type="button" value="start" onclick="start()" />
+    <input type="button" value="stop" onclick="stop()" />
+    <input type="button" value="restart" onclick="restart()" />
+    <br /><br /><br /><br />
+    <img src="./train.jpg" alt="error" id="mytrain" />
+
+    <script>
+      var animation;
+      function init() {
+        let mytrain = document.getElementById("mytrain");
+        mytrain.style.position = "absolute";
+        mytrain.style.left = "0px";
+      }
+      window.onload = init;
+
+      function start() {
+        let mytrain = document.getElementById("mytrain");
+        mytrain.style.left = parseInt(mytrain.style.left) + 10 + "px";
+        animation = setTimeout(start, 115);
+      }
+
+      function stop() {
+        let mytrain = document.getElementById("mytrain");
+        clearTimeout(animation);
+        mytrain.style.left = "paused";
+      }
+
+      function restart() {
+        let mytrain = document.getElementById("mytrain");
+        clearTimeout(animation);
+        mytrain.style.left = "0px";
+      }
+    </script>
+  </body>
+</html>
